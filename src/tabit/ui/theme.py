@@ -1,0 +1,2 @@
+CLR_SPACE_GREY = (17, 0, 34) # BETTER
+CLR_VOID = (5, 13, 37)
