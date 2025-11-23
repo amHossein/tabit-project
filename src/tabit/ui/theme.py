@@ -1,13 +1,9 @@
-
-
-
-
-CLR_SPACE_GREY = (17, 0, 34) # BETTER
+CLR_SPACE_GREY = (17, 0, 34) #110022
 CLR_VOID = (5, 13, 37)
 
-CLR_NEON_GREEN       = (80, 255, 120)  # Base
-CLR_NEON_GREEN_LIGHT = (150, 255, 180)  
-CLR_NEON_GREEN_DARK = (20, 120, 50)    
+CLR_NEON_GREEN       = (80, 255, 120) # Active      #50ff78
+CLR_NEON_GREEN_LIGHT = (150, 255, 180)  # Hover     #96FFB4
+CLR_NEON_GREEN_DARK = (20, 120, 50)    # Press      #147832
 
 
 
