@@ -4,7 +4,7 @@ from tabit.utils import load
 from tabit.ui import theme
 
 
-class ButtonTest(button_base.BTNBase):
+class Button(button_base.BTNBase):
     def __init__(self,surface:pygame.Surface, width:int=10, height:int=10, x:int=10, y:int=10, text:str="" ,font_size:int=18, font_bold:bool=False, command:function=None):
         super().__init__(command)
         self.surface = surface
@@ -22,7 +22,7 @@ class ButtonTest(button_base.BTNBase):
         self.text_rect.topleft = ((width//2)-(self.text_rect.w//2),(height//2)-(self.text_rect.h//2))
         
         
-    def blit(self):
+    def blits(self):
         self.image = self.background
         
         if self.state == "NORMAL":
@@ -43,9 +43,9 @@ if __name__ == "__main__":
     demo_screen = pygame.display.set_mode((400,400))
     
     # create
-    button1 = ButtonTest(surface=demo_screen, width=100, height=50 , text="Text", font_size=24, font_bold=True,command=lambda : print("Button One"))
-    button2 = ButtonTest(demo_screen,x=100, y=120, width=250, height=50, text="This is a Text", font_size=30, command=lambda : print("Button Two"))
-    button3 = ButtonTest(demo_screen,x=100, y=220, width=200, height=50, text="YO", font_size=28, command=lambda : print("YO"))
+    button1 = Button(surface=demo_screen, width=100, height=50 , text="Text", font_size=24, font_bold=True,command=lambda : print("Button One"))
+    button2 = Button(demo_screen,x=100, y=120, width=250, height=50, text="This is a Text", font_size=30, command=lambda : print("Button Two"))
+    button3 = Button(demo_screen,x=100, y=220, width=200, height=50, text="YO", font_size=28, command=lambda : print("YO"))
     
     
     while True:
@@ -58,13 +58,13 @@ if __name__ == "__main__":
         # handle events
         button1.events(event)
         # blit
-        button1.blit()
+        button1.blits()
         
         button2.events(event)
-        button2.blit()
+        button2.blits()
 
         button3.events(event)
-        button3.blit()
+        button3.blits()
         
         pygame.display.update()
         clock.tick(60)

@@ -18,7 +18,7 @@ class ButtonAdd(button_base.BTNBase):
         self.image = self.button_images["NORMAL"]
         self.rect = self.image.get_rect(topleft = (x, y))
         
-    def blit(self):
+    def blits(self):
         if self.state == "NORMAL":
             self.image = self.button_images[self.state]
         elif self.state == "HOVER":
@@ -55,7 +55,7 @@ if __name__ == "__main__":
         
         for btn in mybuttons:
             btn.events(event)
-            btn.blit()
+            btn.blits()
         
         pygame.display.update()
         clock.tick(60)
